@@ -2699,7 +2699,7 @@ var GlobalVariables = /** @class */ (function () {
         return newLink;
     };
     GlobalVariables._key = "id";
-    GlobalVariables._host = "http://paint-store.azurewebsites.net/";
+    GlobalVariables._host = "https://paint-store.azurewebsites.net/";
     return GlobalVariables;
 }());
 
