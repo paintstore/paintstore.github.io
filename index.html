@@ -10,5 +10,18 @@
   <link rel="stylesheet" href="styles.5b5bfb49c57a924979b6.css"></head>
   <body>
     <app-root></app-root>
+    <scripts>
+      (function () {
+      // Retrieve the URL the user was trying to access when receiving the 404.
+      var redirect = sessionStorage.redirect;
+      // Remove the URL from sessionStorage.
+      delete sessionStorage.redirect;
+      // Check if we actually need to redirect.
+      if (redirect && redirect != location.href) {
+        // We need to redirect to the URL the user was trying to access.
+        history.replaceState(null, null, redirect);
+      }
+    })();
+    </scripts>
   <script type="text/javascript" src="runtime.ec2944dd8b20ec099bf3.js"></script><script type="text/javascript" src="polyfills.51ae42b7cd5ce7eb790c.js"></script><script type="text/javascript" src="scripts.806effac119676237f10.js"></script><script type="text/javascript" src="main.06bd3365df5b8fc87d8a.js"></script></body>
 </html>
