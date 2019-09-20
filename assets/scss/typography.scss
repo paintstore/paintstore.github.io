@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,600");
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
-@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap");
 html,
 body {
   font-family: "Roboto", sans-serif;
@@ -644,10 +644,6 @@ $color-grey: #707070;
 }
 
 .loading {
-  // display: block;
-  // height: 40px;
-  // margin-right: 10px;
-
   img {
     margin-top: -90px;
   }
@@ -671,6 +667,65 @@ tag-input {
   text-align: center;
 }
 
+.centered-block {
+  display: block;
+}
+
+.edit-delete-icon:hover {
+  background: #eaeaea;
+}
+
+.icon-spin4 {
+  color: #a5a5a5;
+  margin: 0 15px;
+}
+
+h4.author {
+  display: inline-block;
+}
+
+p.header-info {
+  display: inline-block
+}
+
+.edit-delete-icon {
+  display: inline-block;
+  margin: 0;
+  color: #a5a5a5;
+  font-size: 14px;
+  cursor: pointer;
+  background: transparent;
+  /* padding: 5px 10px; */
+  border-radius: 15px;
+  transition-duration: 0.2s;
+  color: #8c8c8c;
+  padding:5px 4px;
+  margin-left: 5px;
+}
+
+.comment-content {
+  position: relative;
+}
+
+app-likes {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.comment-title {
+  margin: 20px 0;
+}
+
+.data-additional span {
+  margin-left: 12px;
+  color: #8b8b8b;
+}
+
+.data-additional h4 {
+  margin-right: 12px;
+}
+
 @media only screen and (max-width: 1449px) {
   .image-wrapper {
     grid-template-columns: 300px 300px 300px;
@@ -689,35 +744,11 @@ tag-input {
   }
 }
 
-.centered-block {
-  display: block;
+@media only screen and (max-width: 630px) {
+  app-likes {
+    margin-top: 10px;
+    display: block;
+    position: static;
+  }
 }
 
-// delete edit icon
-
-.edit-delete-icon {
-  cursor: pointer;
-  background: transparent;
-  /* padding: 5px 10px; */
-  width: 24px;
-  height: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 12px;
-  transition-duration: 0.2s;
-}
-
-.edit-delete-icon:hover {
-  background: #eaeaea;
-}
-
-// loading icon
-.icon-spin4 {
-  color: #a5a5a5;
-  margin: 0 15px;
-}
-
-// loading elements
-.loading-elements {
-}
